@@ -7,6 +7,7 @@ namespace SCG_ReportAPI.Controllers
     [ApiController]
     public class ReportController : Controller
     {
+        // Ex. 1
         [HttpPost("SummaryByUsageType", Name = "SummaryByUsageType")]
         public IActionResult SummaryByUsageType([FromBody] List<UsageDataModel> request)
         {
@@ -32,6 +33,7 @@ namespace SCG_ReportAPI.Controllers
             return Json(reportData);
         }
 
+        // Ex. 2
         [HttpPost("InvalidUsageType", Name = "InvalidUsageType")]
         public IActionResult InvalidUsageType([FromBody] List<UsageDataModel> request)
         {
@@ -72,6 +74,7 @@ namespace SCG_ReportAPI.Controllers
             return Json(reportData);
         }
 
+        // Ex. 3
         [HttpPost("AnomalyDetectionReport", Name = "AnomalyDetectionReport")]
         public IActionResult AnomalyDetectionReport([FromBody] List<UsageDataModel> request)
         {
